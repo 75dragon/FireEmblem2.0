@@ -32,4 +32,9 @@ public class GameMap extends JPanel
             }
         }
     }
+    
+    public Tile getTile(int col, int row)
+    {
+        return gameMap[col][row];
+    }
 }

@@ -11,11 +11,12 @@ public class World
     Timer gameRun;
     int row;
     int col;
+    GameWindow game;
     public World(int col, int row)
     {
         this.col = col;
         this.row = row;
-        new GameWindow(col,row);
+        game = new GameWindow(col,row);
     }
     
     public void runGame()
@@ -37,7 +38,7 @@ public class World
     
     public void drawGame()
     {
-        
+        game.repaint();
     }
     
     public static void main(String[] args) {

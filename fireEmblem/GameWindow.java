@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 
 public class GameWindow extends JFrame
 {
+    GameMap map;
     public GameWindow(int col, int row)
     {
         super("Test");
@@ -14,7 +15,12 @@ public class GameWindow extends JFrame
         this.getContentPane().setPreferredSize( new Dimension( col * 100, row * 100 ) );
         this.pack();
        
-        GameMap map = new GameMap(col,row);
+        map = new GameMap(col,row);
         this.add(map);
+    }
+    
+    public GameMap getGameMap()
+    {
+        return map;
     }
 }

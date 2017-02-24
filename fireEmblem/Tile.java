@@ -1,11 +1,18 @@
 package fireEmblem;
 
+import java.awt.Color;
+
 import javax.swing.JButton;
 
 public class Tile extends JButton
 {
     int col;
     int row;
+    String type;
+    Hero occupied;
+    Color color;
+    boolean reachable = false;
+    boolean filled = false;
     /**
      * @param x -x coordinate of tile
      * @param y -y coordinate of tile
