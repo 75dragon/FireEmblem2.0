@@ -11,21 +11,21 @@ import javax.swing.JPanel;
 public class GameMap extends JPanel
 {
     Tile[][] gameMap;
-    int xDim;
-    int yDim;
+    int col;
+    int row;
 
-    public GameMap( int x, int y )
+    public GameMap( int col, int row )
     {
-        this.setLayout(new GridLayout(y, x));
-        xDim = x;
-        yDim = y;
-        gameMap = new Tile[x][y];
+        this.setLayout(new GridLayout(row, col));
+        this.col = col;
+        this.row = row;
+        gameMap = new Tile[col][row];
         System.out.println( "done" );
-        for ( int i = 0; i < yDim; i++ )
+        for ( int i = 0; i < row; i++ )
         {
-            for ( int j = 0; j < xDim; j++ )
+            for ( int j = 0; j < col; j++ )
             {
-                Tile tile = new Tile( i, j );
+                Tile tile = new Tile( j, i );
                 gameMap[j][i] = tile;
                 tile.addActionListener( new MouseListener(tile) );
                 this.add( tile );

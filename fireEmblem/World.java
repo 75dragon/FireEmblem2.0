@@ -44,7 +44,7 @@ public class World
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new GameWindow(6,8);
+                new World(6,8);
             }
         });
     }

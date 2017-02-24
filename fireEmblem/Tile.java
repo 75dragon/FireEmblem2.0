@@ -4,38 +4,37 @@ import javax.swing.JButton;
 
 public class Tile extends JButton
 {
-    int x;
-    int y;
+    int col;
+    int row;
     /**
      * @param x -x coordinate of tile
      * @param y -y coordinate of tile
      */
-    public Tile(int x, int y)
+    public Tile(int col, int row)
     {
-        this.x = x;
-        this.y = y;
-        System.out.println( "Tile created at: " + x + ", " + y );
+        this.col = col;
+        this.row = row;
+        System.out.println( "Tile created at: " + col + ", " + row );
+    }
+
+    public int getCol()
+    {
+        return col;
+    }
+
+    public void setCol( int col )
+    {
+        this.col = col;
+    }
+
+    public int getRow()
+    {
+        return row;
+    }
+
+    public void setRow( int row )
+    {
+        this.row = row;
     }
     
-    public Tile()
-    {
-        
-    }
-    
-    public int getX()
-    {
-        return x;
-    }
-    public void setX( int x )
-    {
-        this.x = x;
-    }
-    public int getY()
-    {
-        return y;
-    }
-    public void setY( int y )
-    {
-        this.y = y;
-    }  
 }

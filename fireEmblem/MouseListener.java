@@ -8,30 +8,15 @@ public class MouseListener implements ActionListener
 {
     Tile tile;
 
-
     public MouseListener( Tile tile )
     {
         this.tile = tile;
-        System.out.println( "Made Clicker listener @" + tile.getX() + ", " + tile.getY() );
+        System.out.println( "Made Clicker listener @" + tile.getCol() + ", " + tile.getRow() );
     }
-
-
-    public MouseListener()
-    {
-        System.out.println( "Made Clicker listerer on a normal JButton" );
-    }
-
 
     @Override
     public void actionPerformed( ActionEvent e )
     {
-        if ( tile != null )
-        {
-            System.out.println( "Tile clicked at" + tile.getX() + ", " + tile.getY() );
-        }
-        else
-        {
-            System.out.println( "random tile was clicked" );
-        }
+        System.out.println( "random tile was clicked" );
     }
 }
