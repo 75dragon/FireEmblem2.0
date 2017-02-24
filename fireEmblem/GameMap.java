@@ -16,7 +16,7 @@ public class GameMap extends JPanel
 
     public GameMap( int x, int y )
     {
-        super(new GridLayout(y, x));
+        this.setLayout(new GridLayout(y, x));
         xDim = x;
         yDim = y;
         gameMap = new Tile[x][y];
